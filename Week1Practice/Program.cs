@@ -103,18 +103,38 @@ namespace Week1Practice
             //// PUTTING IT TOGETHER
 
             //// 1. Print out the number of letters in your name using the format: "My name, <myName>, has <number of letters> in it."
-            //string MyName = "Alemshewit";
-            //int numName;
-            //for (int i = 0; i <= MyName.Length; i = i + 1)
-            //{
-            //    Console.WriteLine("My name, " + MyName + ", has " + numName + " in it.");
-            //    numName = i + 1;
-            //}
+          
+                Console.WriteLine("My name, " + MyName + ", has " + numLetters + " in it.");
+           
+         
             //// 2. Print out the number of items in your list using the format: "My product list has <number of items> in it."
+
+                Console.WriteLine("My product list has " + numItems + " in it.");
 
             //// Use either FOR or WHILE loops to accomplish the following:
             //// 3. Print out the number of letters of each item in productsList using the format: "<product> has <number of letters> in it."
 
+            // declare a string product list to hold our items
+            List<string> productList = new List<string>();
+
+            //loop through the product list to find individual items
+            for (int i = 0; i < productList.Count; i++)
+            {
+                //set a variable equal to the current item in our list
+                string item = productList[i];
+
+                //declare a counter variable to store number letters in each item
+                int counter = 0;
+               
+                //loop through each item to determine the number of letters
+                for (int j = 0; j < item.Length; j++)
+                {
+                    //increment the number of letters in the item by one
+                    counter += 1;
+                }
+                //print out to the console how many letters each item has
+                Console.WriteLine(item + " has " + counter + " letter in it");
+            }
 
 
 
